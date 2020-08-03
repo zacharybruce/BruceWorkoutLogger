@@ -65,4 +65,10 @@
   <ItemGroup>
     <None Include="PublishLocations\BWLData.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Workout.sql" />
+    <Build Include="dbo\Tables\WorkoutDetail.sql" />
+    <Build Include="dbo\Tables\Exercise.sql" />
+    <Build Include="dbo\Tables\ExercisePictures.sql" />
+  </ItemGroup>
 </Project>
