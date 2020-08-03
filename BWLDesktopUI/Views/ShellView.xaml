@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:BWLDesktopUI.Views"
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" FontSize="18">
+            <MenuItem Header="_Workouts">                
+            </MenuItem>
+        </Menu>
+        <Grid>
+        </Grid>
+    </DockPanel>    
 </Window>

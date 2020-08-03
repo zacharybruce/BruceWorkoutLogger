@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace BWLDesktopUI.ViewModels
 {
-    public class ShellViewModel : Screen
+    public class ShellViewModel : Conductor<object>
     {
+        private WorkoutLogViewModel _workoutLogVM;
+
+        public ShellViewModel(WorkoutLogViewModel workoutLogVM)
+        {
+            _workoutLogVM = workoutLogVM;
+            ActivateItem(_workoutLogVM);
+        }
     }
 }

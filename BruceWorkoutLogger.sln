@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BWLData", "BWLData\BWLData.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWLDesktopUI", "BWLDesktopUI\BWLDesktopUI.csproj", "{014B7736-F8DA-4C03-98B3-4C084FA54D83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWLData.Library", "BWLData.Library\BWLData.Library.csproj", "{39D5742F-8CC5-411C-8CB1-A9192C60F73B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{014B7736-F8DA-4C03-98B3-4C084FA54D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{014B7736-F8DA-4C03-98B3-4C084FA54D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{014B7736-F8DA-4C03-98B3-4C084FA54D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D5742F-8CC5-411C-8CB1-A9192C60F73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D5742F-8CC5-411C-8CB1-A9192C60F73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D5742F-8CC5-411C-8CB1-A9192C60F73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D5742F-8CC5-411C-8CB1-A9192C60F73B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
