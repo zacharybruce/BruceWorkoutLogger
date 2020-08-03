@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace BWLDesktopUI.Views
 {
     /// <summary>
-    /// Interaction logic for WorkoutLog.xaml
+    /// Interaction logic for WorkoutLogView.xaml
     /// </summary>
-    public partial class WorkoutLog : UserControl
+    public partial class WorkoutLogView : UserControl
     {
-        public WorkoutLog()
+        public WorkoutLogView()
         {
             InitializeComponent();
         }
