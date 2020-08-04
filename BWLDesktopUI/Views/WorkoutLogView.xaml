@@ -25,12 +25,21 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Workout Logger" FontSize="40" Margin="0 0 0 20" HorizontalAlignment="Center"></TextBlock>
 
         <!--Row 1-->
-        <ListBox x:Name="Workouts" Grid.Row="1" Grid.Column="0" Height="200" Width="400"></ListBox>
+        <ListBox x:Name="Workouts" Grid.Row="1" Grid.Column="0" Height="200" Width="400">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding WorkoutName}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <!--Row 2-->
-        <TextBox x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200" Margin="0 20 0 20"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="0 20 0 0" HorizontalAlignment="Center">
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Date: "></TextBlock>
+            <TextBox x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200"></TextBox>
+        </StackPanel>        
 
         <!--Row 3-->
-        <Button x:Name="AddWorkout" Content="Add Workout" Grid.Row="3" Grid.Column="0" Width="200"></Button>
+        <Button x:Name="AddWorkout" Content="Add Workout" Grid.Row="3" Grid.Column="0" Width="200" Margin="0 40 0 0"></Button>
     </Grid>
 </UserControl>

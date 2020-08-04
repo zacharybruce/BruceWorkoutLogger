@@ -70,5 +70,6 @@
     <Build Include="dbo\Tables\WorkoutDetail.sql" />
     <Build Include="dbo\Tables\Exercise.sql" />
     <Build Include="dbo\Tables\ExercisePictures.sql" />
+    <Build Include="dbo\StoredProcedures\spWorkout_GetAll.sql" />
   </ItemGroup>
 </Project>

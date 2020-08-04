@@ -71,6 +71,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataAccess\GetWorkouts.cs" />
+    <Compile Include="Models\WorkoutModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\WorkoutLogViewModel.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
@@ -109,7 +111,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\BWLData.Library\BWLData.Library.csproj">
+      <Project>{39d5742f-8cc5-411c-8cb1-a9192c60f73b}</Project>
+      <Name>BWLData.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\ShellView.xaml">
