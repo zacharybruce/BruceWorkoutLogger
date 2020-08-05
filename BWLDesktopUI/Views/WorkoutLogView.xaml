@@ -36,7 +36,7 @@
         <!--Row 2-->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="0 20 0 0" HorizontalAlignment="Center">
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Date: "></TextBlock>
-            <TextBox x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200"></TextBox>
+            <DatePicker x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200"></DatePicker>
         </StackPanel>        
 
         <!--Row 3-->

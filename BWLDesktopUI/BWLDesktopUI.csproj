@@ -72,7 +72,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAccess\GetWorkouts.cs" />
-    <Compile Include="Models\WorkoutModel.cs" />
+    <Compile Include="DataAccess\IGetWorkouts.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\WorkoutLogViewModel.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
@@ -125,6 +125,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
