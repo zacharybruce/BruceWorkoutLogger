@@ -36,7 +36,13 @@
         <!--Row 2-->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="0 20 0 0" HorizontalAlignment="Center">
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Date: "></TextBlock>
-            <DatePicker x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200"></DatePicker>
+            <DatePicker x:Name="WorkoutDate" Grid.Row="2" Grid.Column="0" Width="200">
+                <DatePicker.Resources>
+                    <Style TargetType="DatePickerTextBox">
+                        <Setter Property="IsReadOnly" Value="True"/>
+                    </Style>
+                </DatePicker.Resources>
+            </DatePicker>
         </StackPanel>        
 
         <!--Row 3-->
