@@ -8,7 +8,7 @@ using BWLData.Library.Models;
 
 namespace BWLDesktopUI.DataAccess
 {
-    public class GetWorkouts
+    public class GetWorkouts : IGetWorkouts
     {
         public List<WorkoutModel> Get()
         {

@@ -12,7 +12,12 @@ namespace BWLDesktopUI.ViewModels
 {
     public class WorkoutLogViewModel : Screen
     {
-        GetWorkouts _getWorkouts = new GetWorkouts();
+        IGetWorkouts _getWorkouts;
+
+        public WorkoutLogViewModel(IGetWorkouts getWorkouts)
+        {
+            _getWorkouts = getWorkouts;
+        }
 
         protected override void OnViewLoaded(object view)
         {

@@ -1,4 +1,5 @@
-﻿using BWLDesktopUI.ViewModels;
+﻿using BWLDesktopUI.DataAccess;
+using BWLDesktopUI.ViewModels;
 using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace BWLDesktopUI
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
+                .Singleton<IGetWorkouts, GetWorkouts>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
             GetType().Assembly.GetTypes()
