@@ -30,6 +30,7 @@ namespace BWLDesktopUI.ViewModels
         {
             var workoutList = _getWorkouts.Get();
             Workouts = new BindingList<WorkoutModel>(workoutList);
+            WorkoutDescription = SelectedWorkout?.WorkoutDescription;
         }
 
         private BindingList<WorkoutModel> _workouts;
@@ -53,6 +54,7 @@ namespace BWLDesktopUI.ViewModels
                 _selectedWorkout = value;
                 NotifyOfPropertyChange(() => SelectedWorkout);
                 NotifyOfPropertyChange(() => CanAddWorkout);
+                WorkoutDescription = SelectedWorkout?.WorkoutDescription;
             }
         }
 
@@ -68,6 +70,18 @@ namespace BWLDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => CanAddWorkout);
             }
         }
+
+        private string _workoutDescription;
+        public string WorkoutDescription
+        {
+            get { return _workoutDescription; }
+            set
+            {
+                _workoutDescription = value;
+                NotifyOfPropertyChange(() => WorkoutDescription);
+            }
+        }
+
 
         public void AddWorkout()
         {
