@@ -82,14 +82,35 @@ namespace BWLDesktopUI.ViewModels
             }
         }
 
+        private string _addWorkoutSuccessful;
+
+        public string AddWorkoutSuccessful
+        {
+            get { return _addWorkoutSuccessful; }
+            set 
+            { 
+                _addWorkoutSuccessful = value;
+                NotifyOfPropertyChange(() => AddWorkoutSuccessful);
+            }
+        }
+
 
         public void AddWorkout()
         {
             WorkoutModel selectedWorkout = SelectedWorkout;
             workouts.Add(selectedWorkout);
             NotifyOfPropertyChange(() => CanAddWorkout);
-        }
+            try
+            {
+                AddWorkoutToHistory.Add(SelectedWorkout.Id, Convert.ToDateTime(WorkoutDate));
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            AddWorkoutSuccessful = "Workout Added Successfully";
+        }
 
         public bool CanAddWorkout
         {

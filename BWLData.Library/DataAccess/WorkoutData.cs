@@ -18,5 +18,14 @@ namespace BWLData.Library.DataAccess
 
             return output;
         }
+
+        public static void AddWorkout(int workoutId, DateTime dateOfWorkout)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            WorkoutDetailModel p = new WorkoutDetailModel{ WorkoutId = workoutId, DateOfWorkout = dateOfWorkout };
+
+            sql.SaveData("dbo.spWorkoutDetail_AddWorkout", p, "BWLData");
+        }
     }
 }

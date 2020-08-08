@@ -48,6 +48,10 @@
         </StackPanel>        
 
         <!--Row 3-->
-        <Button x:Name="AddWorkout" Content="Add Workout" Grid.Row="3" Grid.Column="0" Width="200" Margin="0 40 0 0"></Button>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="100 40 0 0">
+            <Button x:Name="AddWorkout" Content="Add Workout" Grid.Row="3" Grid.Column="0" Width="200" Margin="0 0 20 0"></Button>
+            <TextBlock Text="{Binding AddWorkoutSuccessful}" Foreground="Green" FontSize="16" VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

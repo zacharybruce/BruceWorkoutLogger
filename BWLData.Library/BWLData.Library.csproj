@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DataAccess\WorkoutData.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />
+    <Compile Include="Models\WorkoutDetailModel.cs" />
     <Compile Include="Models\WorkoutModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

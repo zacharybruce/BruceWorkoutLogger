@@ -71,6 +71,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataAccess\AddWorkoutToHistory.cs" />
     <Compile Include="DataAccess\GetWorkouts.cs" />
     <Compile Include="DataAccess\IGetWorkouts.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
