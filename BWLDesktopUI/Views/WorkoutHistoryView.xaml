@@ -7,6 +7,31 @@
              mc:Ignorable="d" Background="White"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="26">Workout History</TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Header-->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Workout History" FontSize="40" Margin="0 0 0 20" HorizontalAlignment="Center"></TextBlock>
+
+        <!--Row 1-->
+        <ListBox x:Name="PastWorkouts" Grid.Row="1" Grid.Column="0" Height="200" Width="400">
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding PastWorkouts}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+        </ListBox>
     </Grid>
 </UserControl>

@@ -74,6 +74,7 @@
     <Compile Include="DataAccess\AddWorkoutToHistory.cs" />
     <Compile Include="DataAccess\GetWorkouts.cs" />
     <Compile Include="DataAccess\IGetWorkouts.cs" />
+    <Compile Include="DataAccess\WorkoutHistory.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\WorkoutHistoryViewModel.cs" />
     <Compile Include="ViewModels\WorkoutLogViewModel.cs" />

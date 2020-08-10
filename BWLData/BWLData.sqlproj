@@ -72,5 +72,9 @@
     <Build Include="dbo\Tables\ExercisePictures.sql" />
     <Build Include="dbo\StoredProcedures\spWorkout_GetAll.sql" />
     <Build Include="dbo\StoredProcedures\spWorkoutDetail_AddWorkout.sql" />
+    <Build Include="dbo\StoredProcedures\sqWorkoutDetail_GetWorkouts.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BWLData.refactorlog" />
   </ItemGroup>
 </Project>

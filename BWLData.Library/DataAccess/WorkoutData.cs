@@ -27,5 +27,14 @@ namespace BWLData.Library.DataAccess
 
             sql.SaveData("dbo.spWorkoutDetail_AddWorkout", p, "BWLData");
         }
+
+        public static List<WorkoutDetailModel> GetPastWorkouts()
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            var output = sql.LoadData<WorkoutDetailModel, dynamic>("dbo.sqWorkoutDetail_GetWorkouts", new { }, "BWLData");
+
+            return output;
+        }
     }
 }

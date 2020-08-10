@@ -13,7 +13,7 @@ namespace BWLDesktopUI.ViewModels
     public class WorkoutLogViewModel : Screen
     {
         IGetWorkouts _getWorkouts;
-        List<WorkoutModel> workouts = new List<WorkoutModel>();
+        //List<WorkoutModel> workouts = new List<WorkoutModel>();
 
         public WorkoutLogViewModel(IGetWorkouts getWorkouts)
         {
@@ -97,7 +97,7 @@ namespace BWLDesktopUI.ViewModels
         public void AddWorkout()
         {
             WorkoutModel selectedWorkout = SelectedWorkout;
-            workouts.Add(selectedWorkout);
+            //workouts.Add(selectedWorkout);
             NotifyOfPropertyChange(() => CanAddWorkout);
             try
             {

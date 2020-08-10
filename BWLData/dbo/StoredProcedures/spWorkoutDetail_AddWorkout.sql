@@ -1,11 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spWorkoutDetail_AddWorkout]
 	@id int,
-	@workoutId int,
+	@workoutName nvarchar(50),
 	@dateOfWorkout datetime2(7)
 AS
 begin
 	set nocount on;
 
 	insert into WorkoutDetail ( WorkoutId, DateOfWorkout)
-	values (@workoutId, @dateOfWorkout);
+	values (@workoutName, @dateOfWorkout);
 end
