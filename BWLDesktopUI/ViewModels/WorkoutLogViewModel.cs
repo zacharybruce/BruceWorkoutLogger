@@ -94,7 +94,6 @@ namespace BWLDesktopUI.ViewModels
             }
         }
 
-
         public void AddWorkout()
         {
             WorkoutModel selectedWorkout = SelectedWorkout;
@@ -103,13 +102,12 @@ namespace BWLDesktopUI.ViewModels
             try
             {
                 AddWorkoutToHistory.Add(SelectedWorkout.Id, Convert.ToDateTime(WorkoutDate));
+                AddWorkoutSuccessful = "Workout Added Successfully";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                AddWorkoutSuccessful = ex.Message;
             }
-            AddWorkoutSuccessful = "Workout Added Successfully";
         }
 
         public bool CanAddWorkout
@@ -126,7 +124,5 @@ namespace BWLDesktopUI.ViewModels
                 return output;
             }
         }
-
-
     }
 }

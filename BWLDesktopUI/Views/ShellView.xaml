@@ -9,6 +9,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="18">
             <MenuItem Header="_View">
+                <MenuItem x:Name="WorkoutHistory" Header="_History"/>
             </MenuItem>
         </Menu>
         <Grid>
