@@ -36,5 +36,12 @@ namespace BWLData.Library.DataAccess
 
             return output;
         }
+
+        public static void DeleteWorkout(int id)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            sql.SaveData("dbo.spWorkoutDetail_DeleteWorkout", new { id }, "BWLData");
+        }
     }
 }

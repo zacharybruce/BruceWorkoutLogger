@@ -46,8 +46,8 @@ namespace BWLDesktopUI.ViewModels
             }
         }
 
-        private string _selectedPastWorkout;
-        public string SelectedPastWorkout
+        private WorkoutDetailModel _selectedPastWorkout;
+        public WorkoutDetailModel SelectedPastWorkout
         {
             get { return _selectedPastWorkout; }
             set 
@@ -60,9 +60,10 @@ namespace BWLDesktopUI.ViewModels
 
         public void DeleteWorkout()
         {
-            //NotifyOfPropertyChange(() => CanDeleteWorkout);
-            //PastWorkouts.RemoveAt(PastWorkouts.IndexOf(SelectedPastWorkout));
-            //NotifyOfPropertyChange(() => PastWorkouts);
+            NotifyOfPropertyChange(() => CanDeleteWorkout);
+            WorkoutHistory.Delete(SelectedPastWorkout.Id);
+            PastWorkouts.Remove(SelectedPastWorkout);
+            NotifyOfPropertyChange(() => PastWorkouts);
         }
 
         public bool CanDeleteWorkout
@@ -71,7 +72,7 @@ namespace BWLDesktopUI.ViewModels
             {
                 bool output = false;
 
-                if (SelectedPastWorkout?.Length > 0)
+                if (SelectedPastWorkout?.WorkoutName.Length > 0)
                 {
                     output = true;
                 }

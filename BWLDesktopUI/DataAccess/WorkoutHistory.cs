@@ -14,5 +14,10 @@ namespace BWLDesktopUI.DataAccess
         {
             return WorkoutData.GetPastWorkouts();
         }
+
+        public static void Delete(int id)
+        {
+            WorkoutData.DeleteWorkout(id);
+        }
     }
 }
