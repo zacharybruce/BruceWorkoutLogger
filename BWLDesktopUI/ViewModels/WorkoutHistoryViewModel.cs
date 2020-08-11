@@ -32,11 +32,12 @@ namespace BWLDesktopUI.ViewModels
             var workoutHistoryList = WorkoutHistory.Get();
             var allWorkouts = _getWorkouts.Get();
 
-            var PastWorkoutsJoin = workoutHistoryList.Join(allWorkouts, x => x.WorkoutId, y => y.Id, (x,y) => new { x.Id, y.WorkoutName }).ToList();
+            var PastWorkoutsJoin = workoutHistoryList.Join(allWorkouts, x => x.WorkoutId, y => y.Id, (x,y) => new { x.DateOfWorkout, y.WorkoutName })
+                .OrderBy(x => x.DateOfWorkout).ToList();
 
             foreach (var item in PastWorkoutsJoin)
             {
-                workouts.Add(item.WorkoutName);
+                workouts.Add($"{item.DateOfWorkout.ToShortDateString()}: {item.WorkoutName}");
             }
 
             PastWorkouts = workouts;
@@ -51,6 +52,18 @@ namespace BWLDesktopUI.ViewModels
             {
                 _pastWorkouts = value;
                 NotifyOfPropertyChange(() => PastWorkouts);
+            }
+        }
+
+        private string _selectedPastWorkout;
+
+        public string SelectedPastWorkout
+        {
+            get { return _selectedPastWorkout; }
+            set 
+            {
+                _selectedPastWorkout = value;
+                NotifyOfPropertyChange(() => SelectedPastWorkout);
             }
         }
 

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BWLDesktopUI.Views"
-             mc:Ignorable="d" Background="White"
+             mc:Ignorable="d" Background="White" FontSize="24"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -26,12 +26,6 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Workout History" FontSize="40" Margin="0 0 0 20" HorizontalAlignment="Center"></TextBlock>
 
         <!--Row 1-->
-        <ListBox x:Name="PastWorkouts" Grid.Row="1" Grid.Column="0" Height="200" Width="400">
-            <!--<ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding PastWorkouts}"/>
-                </DataTemplate>
-            </ListBox.ItemTemplate>-->
-        </ListBox>
+        <ListBox x:Name="PastWorkouts" Grid.Row="1" Grid.Column="0" Height="300" Width="400"></ListBox>
     </Grid>
 </UserControl>
