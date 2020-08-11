@@ -2,6 +2,6 @@
 AS
 begin
 	set nocount on;
-	SELECT id, WorkoutName, WorkoutDescription
+	SELECT WorkoutName, WorkoutDescription
 	from dbo.Workout;
 end

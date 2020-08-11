@@ -27,25 +27,16 @@ namespace BWLDesktopUI.ViewModels
 
         public void LoadWorkoutHistory()
         {
-            List<string> workouts = new List<string>();
+            BindingList<WorkoutDetailModel> workouts = new BindingList<WorkoutDetailModel>();
 
-            var workoutHistoryList = WorkoutHistory.Get();
-            var allWorkouts = _getWorkouts.Get();
+            List<WorkoutDetailModel> workoutHistoryList = WorkoutHistory.Get().OrderBy(x => x.DateOfWorkout).ToList();
 
-            var PastWorkoutsJoin = workoutHistoryList.Join(allWorkouts, x => x.WorkoutId, y => y.Id, (x,y) => new { x.DateOfWorkout, y.WorkoutName })
-                .OrderBy(x => x.DateOfWorkout).ToList();
-
-            foreach (var item in PastWorkoutsJoin)
-            {
-                workouts.Add($"{item.DateOfWorkout.ToShortDateString()}: {item.WorkoutName}");
-            }
-
-            PastWorkouts = workouts;
+            PastWorkouts = new BindingList<WorkoutDetailModel>(workoutHistoryList);
         }
 
-        private List<string> _pastWorkouts;
+        private BindingList<WorkoutDetailModel> _pastWorkouts;
 
-        public List<string> PastWorkouts
+        public BindingList<WorkoutDetailModel> PastWorkouts
         {
             get { return _pastWorkouts; }
             set 
@@ -56,7 +47,6 @@ namespace BWLDesktopUI.ViewModels
         }
 
         private string _selectedPastWorkout;
-
         public string SelectedPastWorkout
         {
             get { return _selectedPastWorkout; }
@@ -64,7 +54,30 @@ namespace BWLDesktopUI.ViewModels
             {
                 _selectedPastWorkout = value;
                 NotifyOfPropertyChange(() => SelectedPastWorkout);
+                NotifyOfPropertyChange(() => CanDeleteWorkout);
             }
+        }
+
+        public void DeleteWorkout()
+        {
+            //NotifyOfPropertyChange(() => CanDeleteWorkout);
+            //PastWorkouts.RemoveAt(PastWorkouts.IndexOf(SelectedPastWorkout));
+            //NotifyOfPropertyChange(() => PastWorkouts);
+        }
+
+        public bool CanDeleteWorkout
+        {
+            get
+            {
+                bool output = false;
+
+                if (SelectedPastWorkout?.Length > 0)
+                {
+                    output = true;
+                }
+
+                return output;
+            }            
         }
 
     }

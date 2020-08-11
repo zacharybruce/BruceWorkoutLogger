@@ -4,6 +4,6 @@ AS
 begin
 	set nocount on
 
-	SELECT Id, WorkoutId, DateOfWorkout
+	SELECT Id, WorkoutName, DateOfWorkout
 	FROM WorkoutDetail;
 end

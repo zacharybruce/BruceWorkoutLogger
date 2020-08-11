@@ -9,9 +9,9 @@ namespace BWLDesktopUI.DataAccess
 {
     public class AddWorkoutToHistory
     {
-        public static void Add(int workoutId, DateTime dateOfWorkout)
+        public static void Add(string workoutName, DateTime dateOfWorkout)
         {
-            WorkoutData.AddWorkout(workoutId, dateOfWorkout);
+            WorkoutData.AddWorkout(workoutName, dateOfWorkout);
         }
     }
 }

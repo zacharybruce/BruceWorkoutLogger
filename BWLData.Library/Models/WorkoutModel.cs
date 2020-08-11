@@ -8,7 +8,6 @@ namespace BWLData.Library.Models
 {
     public class WorkoutModel
     {
-        public int Id { get; set; }
         public string WorkoutName { get; set; }
         public string WorkoutDescription { get; set; }
     }
