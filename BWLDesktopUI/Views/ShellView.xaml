@@ -9,8 +9,11 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="18">
             <MenuItem Header="_View">
-                <MenuItem x:Name="WorkoutLog" Header="Workout Log"/>
+                <MenuItem x:Name="WorkoutLog" Header="_Workout Log"/>
                 <MenuItem x:Name="WorkoutHistory" Header="_History"/>
+            </MenuItem>
+            <MenuItem Header="_Exercises">
+                <MenuItem x:Name="ExerciseList" Header="_List Of Exercises"/>
             </MenuItem>
         </Menu>
         <Grid>

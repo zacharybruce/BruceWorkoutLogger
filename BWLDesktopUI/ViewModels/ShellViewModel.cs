@@ -26,5 +26,10 @@ namespace BWLDesktopUI.ViewModels
         {
             ActivateItem(IoC.Get<WorkoutLogViewModel>());
         }
+
+        public void ExerciseList()
+        {
+            ActivateItem(IoC.Get<ExerciseListViewModel>());
+        }
     }
 }

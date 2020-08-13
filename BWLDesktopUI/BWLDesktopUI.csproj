@@ -74,9 +74,13 @@
     <Compile Include="DataAccess\GetWorkouts.cs" />
     <Compile Include="DataAccess\IGetWorkouts.cs" />
     <Compile Include="DataAccess\WorkoutHistory.cs" />
+    <Compile Include="ViewModels\ExerciseListViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\WorkoutHistoryViewModel.cs" />
     <Compile Include="ViewModels\WorkoutLogViewModel.cs" />
+    <Compile Include="Views\ExerciseListView.xaml.cs">
+      <DependentUpon>ExerciseListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -122,6 +126,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\ExerciseListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
