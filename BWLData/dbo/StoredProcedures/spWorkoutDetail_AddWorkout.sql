@@ -1,6 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[spWorkoutDetail_AddWorkout]
-	@id int,
-	@DisplayText nvarchar(100),
 	@workoutName nvarchar(50),
 	@dateOfWorkout datetime2(7)
 AS

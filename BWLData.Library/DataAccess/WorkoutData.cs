@@ -25,7 +25,7 @@ namespace BWLData.Library.DataAccess
 
             WorkoutDetailModel p = new WorkoutDetailModel{ WorkoutName = workoutName, DateOfWorkout = dateOfWorkout };
 
-            sql.SaveData("dbo.spWorkoutDetail_AddWorkout", p, "BWLData");
+            sql.SaveData("dbo.spWorkoutDetail_AddWorkout", new { workoutName, dateOfWorkout}, "BWLData");
         }
 
         public static List<WorkoutDetailModel> GetPastWorkouts()

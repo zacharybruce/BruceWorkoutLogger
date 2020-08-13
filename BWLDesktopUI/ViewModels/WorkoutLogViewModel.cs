@@ -100,7 +100,7 @@ namespace BWLDesktopUI.ViewModels
             NotifyOfPropertyChange(() => CanAddWorkout);
             try
             {
-                AddWorkoutToHistory.Add(SelectedWorkout.WorkoutName, Convert.ToDateTime(WorkoutDate));
+                WorkoutHistory.Add(SelectedWorkout.WorkoutName, Convert.ToDateTime(WorkoutDate));
                 AddWorkoutSuccessful = "Workout Added Successfully";
             }
             catch (Exception ex)

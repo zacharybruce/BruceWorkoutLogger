@@ -19,5 +19,10 @@ namespace BWLDesktopUI.DataAccess
         {
             WorkoutData.DeleteWorkout(id);
         }
+
+        public static void Add(string workoutName, DateTime dateOfWorkout)
+        {
+            WorkoutData.AddWorkout(workoutName, dateOfWorkout);
+        }
     }
 }
