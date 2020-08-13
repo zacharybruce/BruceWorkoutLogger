@@ -1,8 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[sqWorkoutDetail_GetWorkouts]
+﻿CREATE PROCEDURE [dbo].[spWorkoutDetail_GetWorkouts]
 
 AS
 begin
-	set nocount on
+	set nocount on;
 
 	SELECT Id, WorkoutName, DateOfWorkout
 	FROM WorkoutDetail;

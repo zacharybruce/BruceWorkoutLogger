@@ -32,7 +32,7 @@ namespace BWLData.Library.DataAccess
         {
             SqlDataAccess sql = new SqlDataAccess();
 
-            var output = sql.LoadData<WorkoutDetailModel, dynamic>("dbo.sqWorkoutDetail_GetWorkouts", new { }, "BWLData");
+            var output = sql.LoadData<WorkoutDetailModel, dynamic>("dbo.spWorkoutDetail_GetWorkouts", new { }, "BWLData");
 
             return output;
         }
