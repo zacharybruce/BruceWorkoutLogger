@@ -5,6 +5,6 @@ namespace BWLDesktopUI.DataAccess
 {
     public interface IExercises
     {
-        List<ExerciseModel> Add();
+        List<ExerciseModel> Get();
     }
 }

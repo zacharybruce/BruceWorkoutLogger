@@ -31,23 +31,37 @@ namespace BWLDesktopUI.ViewModels
         private void LoadWorkouts()
         {
             var workoutList = _getWorkouts.Get();
-            WorkoutList = new BindingList<WorkoutModel>(workoutList);
+            Workouts = new BindingList<WorkoutModel>(workoutList);
         }
 
         private void LoadExercises()
         {
-            var exerciseList = _exercises.Add();
+            var exerciseList = _exercises.Get();
             ExerciseList = new BindingList<ExerciseModel>(exerciseList);
         }
-
-        private BindingList<WorkoutModel> _workoutList;
-        public BindingList<WorkoutModel> WorkoutList
+        private void FilterExercises()
         {
-            get { return _workoutList; }
+            var exerciseList = _exercises.Get();
+
+            if (SelectedWorkout?.WorkoutName.Length > 0)
+            {
+                var filteredExerciseList = exerciseList.Where(x => x.WorkoutName == SelectedWorkout.WorkoutName).ToList();
+                ExerciseList = new BindingList<ExerciseModel>(filteredExerciseList);
+            }
+            else
+            {
+                ExerciseList = new BindingList<ExerciseModel>(exerciseList);
+            }
+        }
+
+        private BindingList<WorkoutModel> _workouts;
+        public BindingList<WorkoutModel> Workouts
+        {
+            get { return _workouts; }
             set
             {
-                _workoutList = value;
-                NotifyOfPropertyChange(() => WorkoutList);
+                _workouts = value;
+                NotifyOfPropertyChange(() => Workouts);
             }
         }
 
@@ -62,6 +76,20 @@ namespace BWLDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => ExerciseList);
             }
         }
+
+        private WorkoutModel _selectedWorkout;
+
+        public WorkoutModel SelectedWorkout
+        {
+            get { return _selectedWorkout; }
+            set 
+            { 
+                _selectedWorkout = value;
+                NotifyOfPropertyChange(() => SelectedWorkout);
+                FilterExercises();
+            }
+        }
+
 
     }
 }

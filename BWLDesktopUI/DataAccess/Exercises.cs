@@ -10,7 +10,7 @@ namespace BWLDesktopUI.DataAccess
 {
     public class Exercises : IExercises
     {
-        public List<ExerciseModel> Add()
+        public List<ExerciseModel> Get()
         {
             return WorkoutData.GetExercises();
         }
