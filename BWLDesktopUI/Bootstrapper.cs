@@ -26,6 +26,7 @@ namespace BWLDesktopUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IGetWorkouts, GetWorkouts>()
+                .Singleton<IExercises, Exercises>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
             GetType().Assembly.GetTypes()
