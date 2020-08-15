@@ -14,6 +14,7 @@
             </MenuItem>
             <MenuItem Header="_Exercises">
                 <MenuItem x:Name="ExerciseList" Header="_List Of Exercises"/>
+                <MenuItem x:Name="ExerciseDescriptions" Header="Descriptions"/>
             </MenuItem>
         </Menu>
         <Grid>

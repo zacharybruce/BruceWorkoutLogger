@@ -76,10 +76,14 @@
     <Compile Include="DataAccess\IExercises.cs" />
     <Compile Include="DataAccess\IGetWorkouts.cs" />
     <Compile Include="DataAccess\WorkoutHistory.cs" />
+    <Compile Include="ViewModels\ExerciseDescriptionViewModel.cs" />
     <Compile Include="ViewModels\ExerciseListViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\WorkoutHistoryViewModel.cs" />
     <Compile Include="ViewModels\WorkoutLogViewModel.cs" />
+    <Compile Include="Views\ExerciseDescriptionView.xaml.cs">
+      <DependentUpon>ExerciseDescriptionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExerciseListView.xaml.cs">
       <DependentUpon>ExerciseListView.xaml</DependentUpon>
     </Compile>
@@ -128,6 +132,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\ExerciseDescriptionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ExerciseListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
