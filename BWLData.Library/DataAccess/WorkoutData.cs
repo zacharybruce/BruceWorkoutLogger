@@ -44,11 +44,20 @@ namespace BWLData.Library.DataAccess
             sql.SaveData("dbo.spWorkoutDetail_DeleteWorkout", new { id }, "BWLData");
         }
 
-        public static List<ExerciseModel> GetExercises()
+        public List<ExerciseModel> GetExercises()
         {
             SqlDataAccess sql = new SqlDataAccess();
 
             var output = sql.LoadData<ExerciseModel, dynamic>("dbo.spExercise_GetExercises", new { }, "BWLData");
+
+            return output;
+        }
+
+        public List<ExercisePictureModel> GetPictures()
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            var output = sql.LoadData<ExercisePictureModel, dynamic>("dbo.spExercisePictures_GetAll", new { }, "BWLData");
 
             return output;
         }

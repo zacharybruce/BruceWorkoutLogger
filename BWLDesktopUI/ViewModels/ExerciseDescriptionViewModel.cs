@@ -77,6 +77,22 @@ namespace BWLDesktopUI.ViewModels
             }
         }
 
+        private ExerciseModel _selectedExercise;
+
+        public ExerciseModel SelectedExercise
+        {
+            get { return _selectedExercise; }
+            set 
+            { 
+                _selectedExercise = value;
+                NotifyOfPropertyChange(() => SelectedExercise);
+                NotifyOfPropertyChange(() => ExerciseDescription);
+                NotifyOfPropertyChange(() => ExercisePicture);
+                ExerciseDescription = SelectedExercise?.ExerciseDescription;
+                ExercisePicture = GetExercisePicture();
+            }
+        }
+
         public void FilterExercises()
         {
             var fullExerciseList = LoadExercises();
@@ -84,5 +100,46 @@ namespace BWLDesktopUI.ViewModels
             Exercises = new BindingList<ExerciseModel>(filteredExerciseList);
         }
 
+        private string _exerciseDescription;
+
+        public string ExerciseDescription
+        {
+            get { return _exerciseDescription; }
+            set 
+            {
+                _exerciseDescription = value;
+                NotifyOfPropertyChange(() => ExerciseDescription);
+            }
+        }
+
+        private string _exercisePicture;
+
+        public string ExercisePicture
+        {
+            get { return _exercisePicture; }
+            set 
+            { 
+                _exercisePicture = value;
+                NotifyOfPropertyChange(() => ExercisePicture);
+            }
+        }
+
+
+        public string GetExercisePicture()
+        {
+            if (SelectedExercise != null)
+            {
+                ExercisePictureModel exercisePicture = _exerciseList.GetPictures().Where(x => x.ExerciseId == SelectedExercise.Id)
+                .FirstOrDefault();
+
+                string exercisePicturePath = exercisePicture?.ExercisePicturePath;
+                return exercisePicturePath;
+            }
+            else
+            {
+                return "";
+            }
+
+        }
     }
 }

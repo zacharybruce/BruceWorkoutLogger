@@ -6,5 +6,7 @@ namespace BWLDesktopUI.DataAccess
     public interface IExercises
     {
         List<ExerciseModel> Get();
+
+        List<ExercisePictureModel> GetPictures();
     }
 }

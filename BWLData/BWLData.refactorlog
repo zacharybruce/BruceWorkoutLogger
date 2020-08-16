@@ -21,4 +21,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="WorkoutName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="9769721c-02f0-4298-b49f-62e55b904349" ChangeDateTime="08/14/2020 16:33:20">
+    <Property Name="ElementName" Value="[dbo].[ExercisePictures].[ExercisePicture]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExercisePictures]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExercisePicturePath" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="be06f187-e04f-403c-8f70-fb132b19fe26" ChangeDateTime="08/14/2020 16:34:56">
+    <Property Name="ElementName" Value="[dbo].[ExercisePictures].[ExerciseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExercisePictures]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExerciseName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="87b02fdf-3c34-426e-90e2-82a8b987b4d5" ChangeDateTime="08/14/2020 16:41:50">
+    <Property Name="ElementName" Value="[dbo].[ExercisePictures].[ExerciseName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExercisePictures]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExerciseId" />
+  </Operation>
 </Operations>

@@ -12,7 +12,14 @@ namespace BWLDesktopUI.DataAccess
     {
         public List<ExerciseModel> Get()
         {
-            return WorkoutData.GetExercises();
+            WorkoutData workoutData = new WorkoutData();
+            return workoutData.GetExercises();
+        }
+
+        public List<ExercisePictureModel> GetPictures()
+        {
+            WorkoutData workoutData = new WorkoutData();
+            return workoutData.GetPictures();
         }
     }
 }
