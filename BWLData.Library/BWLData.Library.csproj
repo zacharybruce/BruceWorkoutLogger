@@ -56,10 +56,21 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Images\SingleArmBicepCurl.jpg" />
-    <Content Include="Images\TestPic.JPG" />
+    <Content Include="Images\BackFlysPic.png" />
+    <Content Include="Images\BackstrokePic.jpg" />
+    <Content Include="Images\BenchPressPic.png" />
+    <Content Include="Images\BicepCurlPic.png" />
+    <Content Include="Images\BreaststrokePic.jfif" />
+    <Content Include="Images\ButterflyStrokePic.jpg" />
+    <Content Include="Images\FrontCrawlPic.png" />
+    <Content Include="Images\PushUpsPic.png" />
+    <Content Include="Images\SeatedRowsPic.png" />
+    <Content Include="Images\ShoulderPressPic.png" />
+    <Content Include="Images\SquatsPic.png" />
+    <Content Include="Images\StraightLegDeadliftPic.png" />
+    <Content Include="Images\TricepExtensionsPic.png" />
+    <Content Include="Images\WeightedLungesPic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
